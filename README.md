@@ -8,6 +8,7 @@ The application has been deployed to the following environments:
 
 *   **Frontend (Interface):** [https://projectbrain.vercel.app](https://projectbrain.vercel.app/)
 *   **Backend (API):** [https://bhanushray-project-brain-backend.hf.space](https://bhanushray-project-brain-backend.hf.space)
+*   **Backend Hugging Face Space:** [https://huggingface.co/spaces/Bhanushray/project-brain-backend](https://huggingface.co/spaces/Bhanushray/project-brain-backend)
 
 > **Note:** The backend is hosted on a free-tier container which may spin down during inactivity. Upon initial load, the **"Reset Ingestion"** button in the application header should be clicked to re-initialize the vector index.
 
