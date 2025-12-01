@@ -6,8 +6,8 @@ This repository contains the submission for the Applied LLM Engineer technical c
 
 The application has been deployed to the following environments:
 
-*   **Frontend (Interface):** [https://your-frontend-url.vercel.app](https://projectbrain.vercel.app/)
-*   **Backend (API):** [https://your-backend-url.hf.space](https://bhanushray-project-brain-backend.hf.space)
+*   **Frontend (Interface):** [https://projectbrain.vercel.app](https://projectbrain.vercel.app/)
+*   **Backend (API):** [https://bhanushray-project-brain-backend.hf.space](https://bhanushray-project-brain-backend.hf.space)
 
 > **Note:** The backend is hosted on a free-tier container which may spin down during inactivity. Upon initial load, the **"Reset Ingestion"** button in the application header should be clicked to re-initialize the vector index.
 
