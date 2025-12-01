@@ -57,7 +57,7 @@ The backend requires Python 3.10+ and a valid Groq API key.
     ```bash
     pip install -r requirements.txt
     ```
-3.  Change the Groq API Key in rag_engine.py python file:
+3.  Change the Groq API Key in rag_engine.py Python File:
     ```properties
     api_key=gsk_key_here
     ```
