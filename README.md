@@ -57,9 +57,9 @@ The backend requires Python 3.10+ and a valid Groq API key.
     ```bash
     pip install -r requirements.txt
     ```
-3.  Configure environment variables in a `.env` file:
+3.  Change the Groq API Key in python files:
     ```properties
-    GROQ_API_KEY=gsk_your_key_here
+    api_key=gsk_key_here
     ```
 4.  Initialize the vector database:
     ```bash
