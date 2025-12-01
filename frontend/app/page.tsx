@@ -201,11 +201,14 @@ export default function Home() {
                   <span className="text-[10px] font-bold text-slate-400 uppercase flex items-center gap-1">
                     <FileText size={10}/> Sources:
                   </span>
+
                   {msg.sources.map((src: any, k: number) => (
                     <span key={k} className="text-[10px] bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-slate-600">
-                      {src.source || "File"} 
+                      {src.source || "File"}
+                      {src.page && src.page !== "N/A" ? ` (p. ${src.page})` : ""}
                     </span>
                   ))}
+                  
                 </div>
               )}
             </div>
