@@ -123,8 +123,27 @@ export default function Home() {
           <p className="text-xs text-slate-500">36-Hour Challenge</p>
         </div>
         <button 
-           onClick={() => fetch('http://localhost:8000/ingest', {method: 'POST'})}
-           className="text-xs text-slate-400 hover:text-blue-600 border border-slate-200 px-3 py-1 rounded-md bg-slate-50"
+           onClick={async () => {
+             const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+             const targetUrl = `${baseUrl}/ingest`;
+             
+             // 1. User Feedback
+             const confirm = window.confirm(`Trigger ingestion at: ${targetUrl}?`);
+             if (!confirm) return;
+
+             alert("Ingestion started... This may take 60 seconds. Check Backend Logs.");
+             
+             try {
+               // 2. Dynamic Fetch
+               const res = await fetch(targetUrl, {method: 'POST'});
+               const data = await res.json();
+               alert("Server response: " + JSON.stringify(data));
+             } catch (e) {
+               console.error(e);
+               alert("Error: Could not reach backend.");
+             }
+           }}
+           className="text-xs text-slate-400 hover:text-blue-600 border border-slate-200 px-3 py-1 rounded-md bg-slate-50 transition hover:bg-white"
         >
             Reset Ingestion
         </button>
