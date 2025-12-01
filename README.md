@@ -14,6 +14,21 @@ The application has been deployed to the following environments:
 
 ---
 
+## Application Preview
+
+### 1. Natural Language Chat (RAG)
+*Answers questions based on documents with precise page-level citations.*
+
+![Chat Mode](./screenshots/IMAGE1.png)
+
+
+### 2. Structured Data Extraction
+*Converts messy PDF data into clean, structured tables (e.g., Door Schedules).*
+
+![Extraction Mode](./screenshots/IMAGE2.png)
+
+---
+
 ## System Architecture
 
 The solution is architected as a decoupled system using FastAPI for the inference layer and Next.js for the user interface.
@@ -57,9 +72,10 @@ The backend requires Python 3.10+ and a valid Groq API key.
     ```bash
     pip install -r requirements.txt
     ```
-3.  Change the Groq API Key in rag_engine.py Python File:
+3.  Configure environment variables:
+    Create a `.env` file in the `Backend` folder:
     ```properties
-    api_key=gsk_key_here
+    GROQ_API_KEY=gsk_your_key_here
     ```
 4.  Initialize the vector database:
     ```bash
@@ -103,7 +119,7 @@ TEST #2: [CHAT] 'What is the flooring material in the lobby?'
    -> PASS (7.78s) - Found 3 sources.
 ----------------------------------------
 TEST #3: [EXTRACT] 'Generate a door schedule'
-   -> PASS (9.2s) - Extracted 9 rows.
+   -> PASS (9.2s) - Extracted rows.
 ----------------------------------------
 TEST #4: [CHAT] 'Who is the architect?'
    -> PASS (8.5s) - Answer length > 10 chars.
